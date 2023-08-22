@@ -5,7 +5,7 @@
  * Versão: 1.0
  ****************************************************************************/
 
-/**
+/*
  * Express - dependencia do Node, que permite a integração entre o protocolo http com o código
  *     npm install express --save
  * 
@@ -16,7 +16,7 @@
  *     npm install body-parser --save
  */
 
-/**
+/*
     Para realizar  a conexão com Banco e dados iremos utilizar o PRISMA
         npm install prisma --save
         npx prisma
@@ -56,3 +56,11 @@ const bodyJSON = bodyParser.json();
 var controllerAluno = require('./controller/controller_usuario.js');
 
 //EndPoint: 
+
+
+
+
+
+module.exports = {
+    
+}
