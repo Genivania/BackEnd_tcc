@@ -54,3 +54,5 @@ const bodyJSON = bodyParser.json();
 
 //Import da controller do aluno
 var controllerAluno = require('./controller/controller_usuario.js');
+
+//EndPoint: 
