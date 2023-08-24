@@ -20,6 +20,8 @@ const insertHemocentro = async function(dadosHemocentro){
                                         email,
                                         phone,
                                         website,
+                                        donationSite,
+                                        otherDonationSite,
                                         photo,
                                         password)
                                         values
@@ -28,6 +30,8 @@ const insertHemocentro = async function(dadosHemocentro){
                                         '${dadosHemocentro.email}',
                                         '${dadosHemocentro.phone}',
                                         '${dadosHemocentro.website}',
+                                        '${dadosHemocentro.donationSite}',
+                                        '${dadosHemocentro.otherDonationSite}',
                                         '${dadosHemocentro.photo}',
                                         '${dadosHemocentro.password}'
                                         )`;
