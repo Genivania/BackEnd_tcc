@@ -52,15 +52,32 @@ app.use((request, response, next) => {
 const bodyJSON = bodyParser.json();
 
 
-//Import da controller do aluno
-var controllerAluno = require('./controller/controller_usuario.js');
+//Import da controller do usuario
+var controllerHemocentro = require('./controller/controller_hemocentro.js');
 
-//EndPoint: 
-
-
+var controllerUsuario = require('./controller/controller_usuario.js');
 
 
+//EndPoints: 
 
-module.exports = {
-    
-}
+app.post('/v1/doacao-sangue/hemocentro', cors(), bodyJSON, async function(request, response) {
+
+    //Recebe os dados encaminhados no body da requisição
+    let dadosBody = request.body;
+
+    console.log(dadosBody)
+
+    //Envia os dados para a controller
+    let resultInsertDados = await controllerHemocentro.inserirHemocentro(dadosBody);
+
+    //Retorna o status code e a message
+    response.status(resultInsertDados.status);
+    response.json(resultInsertDados)
+
+});
+
+
+
+app.listen(8080, function() {
+    console.log('Servidor aguardando requisições na porta 8080!')
+})
