@@ -36,6 +36,8 @@ const insertHemocentro = async function(dadosHemocentro){
                                         '${dadosHemocentro.password}'
                                         )`;
 
+    
+
     //Executa o script SQL no BD e recebemos o retorno se deu certo ou não
     let result = await prisma.$executeRawUnsafe(sql);
 

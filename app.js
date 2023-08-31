@@ -60,7 +60,7 @@ var controllerUsuario = require('./controller/controller_usuario.js');
 
 //EndPoints: 
 
-app.post('/v1/doacao-sangue/hemocentro', cors(), bodyJSON, async function(request, response) {
+app.post('/v1/blood-donation/hemocentro', cors(), bodyJSON, async function(request, response) {
 
     //Recebe os dados encaminhados no body da requisição
     let dadosBody = request.body;
